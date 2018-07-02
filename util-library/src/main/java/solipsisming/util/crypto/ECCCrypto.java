@@ -30,9 +30,9 @@ import solipsisming.util.exception.UnacceptableInstanceError;
  */
 public class ECCCrypto {
 
-    /**
+   /* *//**
      * 禁止创建对象
-     */
+     *//*
     private ECCCrypto() {
         throw new UnacceptableInstanceError();
     }
@@ -41,7 +41,7 @@ public class ECCCrypto {
     private static final String PUBLIC_KEY = "ECCPublicKey";
     private static final String PRIVATE_KEY = "ECCPrivateKey";
 
-    /**
+    *//**
      * 解密<br>
      * 用私钥解密
      *
@@ -49,7 +49,7 @@ public class ECCCrypto {
      * @param key
      * @return
      * @throws Exception
-     */
+     *//*
     public static byte[] decrypt(byte[] data, String key) throws Exception {
         // 对密钥解密
         byte[] keyBytes =  BASE64Crypto.decode(key);
@@ -73,7 +73,7 @@ public class ECCCrypto {
         return cipher.doFinal(data);
     }
 
-    /**
+    *//**
      * 加密<br>
      * 用公钥加密
      *
@@ -81,7 +81,7 @@ public class ECCCrypto {
      * @param privateKey
      * @return
      * @throws Exception
-     */
+     *//*
     public static byte[] encrypt(byte[] data, String privateKey)
             throws Exception {
         // 对公钥解密
@@ -106,13 +106,13 @@ public class ECCCrypto {
         return cipher.doFinal(data);
     }
 
-    /**
+    *//**
      * 取得私钥
      *
      * @param keyMap
      * @return
      * @throws Exception
-     */
+     *//*
     public static String getPrivateKey(Map<String, Object> keyMap)
             throws Exception {
         Key key = (Key) keyMap.get(PRIVATE_KEY);
@@ -120,13 +120,13 @@ public class ECCCrypto {
         return  BASE64Crypto.encodeToString(key.getEncoded());
     }
 
-    /**
+    *//**
      * 取得公钥
      *
      * @param keyMap
      * @return
      * @throws Exception
-     */
+     *//*
     public static String getPublicKey(Map<String, Object> keyMap)
             throws Exception {
         Key key = (Key) keyMap.get(PUBLIC_KEY);
@@ -134,12 +134,12 @@ public class ECCCrypto {
         return  BASE64Crypto.encodeToString(key.getEncoded());
     }
 
-    /**
+    *//**
      * 初始化密钥
      *
      * @return
      * @throws Exception
-     */
+     *//*
     public static Map<String, Object> initKey() throws Exception {
         BigInteger x1 = new BigInteger(
                 "2fe13c0537bbc11acaa07d793de4e6d5e5c94eee8", 16);
@@ -178,5 +178,5 @@ public class ECCCrypto {
         keyMap.put(PRIVATE_KEY, privateKey);
 
         return keyMap;
-    }
+    }*/
 }
