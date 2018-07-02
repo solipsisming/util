@@ -14,7 +14,7 @@ import solipsisming.util.exception.UnacceptableInstanceError;
  * @author 洪东明
  * @version 1.0
  */
-public class DirectoryUtils {
+public class  DirectoryUtils {
 
     /**
      * assets目录

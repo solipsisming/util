@@ -177,4 +177,15 @@ public class SystemService {
         intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
         return intent;
     }
+
+    /**
+     * 打开网址
+     *
+     * @param url 网址
+     * @return intent
+     */
+    public static Intent openNet(String url) {
+        Uri uri = Uri.parse(url);
+        return new Intent(Intent.ACTION_VIEW, uri);
+    }
 }

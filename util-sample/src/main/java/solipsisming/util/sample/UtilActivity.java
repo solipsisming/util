@@ -3,6 +3,7 @@ package solipsisming.util.sample;
 import android.app.Activity;
 import android.os.Bundle;
 
+import solipsisming.util.system.DeviceUtils;
 import solipsisming.util.system.PrintLog;
 
 public class UtilActivity extends Activity {
@@ -12,6 +13,13 @@ public class UtilActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.util_activity);
         printLogUtilsTest();
+        DeviceUtilsTest();
+    }
+
+    private void DeviceUtilsTest() {
+        PrintLog.logE(DeviceUtils.isGpsUseful(this));
+        PrintLog.logE(DeviceUtils.isScreenLocked(this));
+        PrintLog.logE(DeviceUtils.getAndroidId(this));
     }
 
     private void printLogUtilsTest() {
